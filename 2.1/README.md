@@ -1,24 +1,28 @@
-# Vector Tile Specification
+# 벡터 타일 사양서
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
 "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in
 this document are to be interpreted as described in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt).
 
-## 1. Purpose
+## 1. 목적
 
 This document specifies a space-efficient encoding format for tiled geographic vector data. It is designed to be used in browsers or server-side applications for fast rendering or lookups of feature data.
+이 문서는 벡터 타일 데이터의 효율적인 저장 인코딩 형식을 명시합니다. 이 사양은 빠른 렌더링 및 피처 데이터 검색을 브라우저 및 서버 측 응용 프로그램에서 실현하도록 설계되었습니다.
 
-## 2. File Format
+## 2. 파일 형식
 
 The Vector Tile format uses [Google Protocol Buffers](https://developers.google.com/protocol-buffers/) as a encoding format. Protocol Buffers are a language-neutral, platform-neutral extensible mechanism for serializing structured data.
+벡터 타일 형식은 [Google Protocol Buffers](https://developers.google.com/protocol-buffers/)를 인코딩 형식으로 사용합니다. Protocol Buffers는 구조화된 데이터를 저장하기 위해 특정 언어나 플랫폼에 의존하지 않는 확장 가능한 구조입니다.
 
-### 2.1. File Extension
+### 2.1. 파일 확장자
 
 The filename extension for Vector Tile files SHOULD be `mvt`. For example, a file might be named `vector.mvt`.
+벡터 타일 파일명의 확장자는 `mvt`여야 합니다(SHOULD). 예를 들어 `vector.mvt`일 수 있습니다.
 
-### 2.2. Multipurpose Internet Mail Extensions (MIME)
+### 2.2. MIME 타입
 
 When serving Vector Tiles the MIME type SHOULD be `application/vnd.mapbox-vector-tile`.
+벡터 타일의 MIME 타입은 `application/vnd.mapbox-vector-tile`여야 합니다(SHOULD).
 
 ## 3. Projection and Bounds
 
